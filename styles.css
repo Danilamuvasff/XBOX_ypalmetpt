@@ -21,6 +21,7 @@ header {
   padding: 12px 0;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 .header-container {
@@ -63,6 +64,7 @@ header {
   color: white;
   outline: none;
   width: 160px;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Hero секция */
@@ -86,28 +88,28 @@ header {
 .hero-title {
   position: absolute;
   top: 175px;
-  right: 100px; /* Остаётся справа */
+  right: 100px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 36px;
   color: #fff;
   margin: 0;
-  text-align: left; /* Текст внутри выровнен влево */
-  width: 100%; /* Добавлено для правильного выравнивания */
-  max-width: 300px; /* Ограничиваем ширину */
+  text-align: left;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* Подзаголовок Battlefront II */
 .hero-subtitle {
   position: absolute;
   top: 215px;
-  right: 100px; /* Остаётся справа */
+  right: 100px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
   color: #fff;
   margin: 0;
-  text-align: left; /* Текст внутри выровнен влево */
+  text-align: left;
   width: 100%;
   max-width: 300px;
 }
@@ -116,7 +118,7 @@ header {
 .hero-buttons {
   position: absolute;
   top: 400px;
-  right: 100px; /* Остаётся справа */
+  right: 100px;
   display: flex;
   gap: 13px;
 }
@@ -220,7 +222,7 @@ header {
 
 /* ----- Стили ФУТЕРА (основаны на вашем Footer.png) ----- */
 .site-footer {
-  background-color: #151515; /* Почти черный, как на скриншоте */
+  background-color: #151515;
   padding: 48px 0 30px;
   border-top: 1px solid #2a2a2a;
   font-family: var(--font-family);
@@ -255,7 +257,7 @@ header {
 }
 
 .link-column h4 {
-  color: #8dd83d; /* Акцентный зеленый, как в карточках */
+  color: #8dd83d;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 18px;
@@ -368,43 +370,6 @@ header {
 .copyright {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
-}
-
-/* Адаптивность */
-@media (max-width: 900px) {
-  .footer-top {
-    flex-direction: column;
-  }
-  .footer-social {
-    text-align: left;
-  }
-  .social-icons {
-    justify-content: flex-start;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-links {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .footer-container {
-    padding: 0 20px;
-  }
-}
-
-/* Стилизация маленькой иконки и стрелок (как в вашем дизайне) */
-.small-icon {
-  width: 14px;
-  margin-left: 4px;
-  vertical-align: middle;
 }
 
 .cod-section {
@@ -607,43 +572,325 @@ header {
   margin-bottom: 40px;
 }
 
-/* адаптив */
-@media (max-width: 900px) {
-  body {
-    padding: 20px 0;
-  }
-  .card-text-left,
-  .card-image-left {
+/* ========== ПОЛНАЯ АДАПТАЦИЯ ПОД 375px ========== */
+@media (max-width: 768px) {
+  /* Шапка */
+  .header-container {
+    padding: 0 15px;
     flex-direction: column;
+    align-items: stretch;
   }
-  .specs-grid {
-    grid-template-columns: 1fr;
+  
+  .nav-list {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  /* Hero секция */
+  .hero {
+    height: 500px;
+  }
+  
+  .hero-container {
+    height: 500px;
+  }
+  
+  .hero-title {
+    top: 120px;
+    right: 20px;
+    left: 20px;
+    font-size: 28px;
+    max-width: none;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    top: 165px;
+    right: 20px;
+    left: 20px;
+    font-size: 18px;
+    max-width: none;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    top: 280px;
+    right: 20px;
+    left: 20px;
+    justify-content: center;
     gap: 15px;
   }
-  .cod-title,
-  .tech-title {
+  
+  .btn {
+    width: 120px;
+    font-size: 12px;
+  }
+  
+  /* Highlights секция */
+  .highlights-grid {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .highlights-title {
+    font-size: 24px;
+    padding: 0 15px;
+  }
+  
+  .highlight-card {
+    width: 100%;
+  }
+  
+  /* Футер */
+  .footer-container {
+    padding: 0 20px;
+  }
+  
+  .footer-top {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-links {
+    gap: 30px;
+    flex-direction: column;
+  }
+  
+  .footer-social {
+    text-align: left;
+  }
+  
+  .social-icons {
+    justify-content: flex-start;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  /* Game details секция */
+  .cod-title {
     font-size: 28px;
   }
-  .card-text-left .text-side h2,
-  .card-image-left .text-side h2 {
-    font-size: 28px;
-  }
-  .card-text-left .text-side,
-  .card-image-left .text-side {
-    padding: 30px 20px;
-  }
+  
   .cod-buttons {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  .cod-section {
-    margin-bottom: 40px;
+  
+  .btn-dark, .btn-green {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px;
   }
-  .card-text-left {
-    margin-bottom: 30px;
+  
+  .card-text-left, .card-image-left {
+    flex-direction: column;
   }
-  .card-image-left {
-    margin-bottom: 40px;
+  
+  .card-text-left .text-side h2,
+  .card-image-left .text-side h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .card-text-left .text-side,
+  .card-image-left .text-side {
+    padding: 25px 20px;
+    text-align: center;
+  }
+  
+  .card-text-left .image-side,
+  .card-image-left .image-side {
+    padding: 15px;
+  }
+  
+  .tech-title {
+    font-size: 28px;
+  }
+  
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .spec-item {
+    font-size: 16px;
+  }
+  
+  .bottom-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .bottom-buttons .btn-green,
+  .bottom-buttons .btn-dark {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Специально для 375px */
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Шапка */
+  .nav-list {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .header-container a {
+    font-size: 14px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Hero */
+  .hero {
+    height: 450px;
+  }
+  
+  .hero-container {
+    height: 450px;
+  }
+  
+  .hero-title {
+    top: 100px;
+    font-size: 24px;
+  }
+  
+  .hero-subtitle {
+    top: 140px;
+    font-size: 16px;
+  }
+  
+  .hero-buttons {
+    top: 240px;
+  }
+  
+  .btn {
+    width: 110px;
+    font-size: 11px;
+    height: 34px;
+  }
+  
+  /* Карточки */
+  .cod-title {
+    font-size: 24px;
+  }
+  
+  .card-text-left .text-side h2,
+  .card-image-left .text-side h2 {
+    font-size: 24px;
+  }
+  
+  .tech-title {
+    font-size: 24px;
+  }
+  
+  .spec-item {
+    font-size: 14px;
+  }
+  
+  /* Футер */
+  .site-footer {
+    padding: 35px 0 25px;
+  }
+  
+  .link-column h4 {
+    font-size: 14px;
+  }
+  
+  .link-column a {
+    font-size: 12px;
+  }
+  
+  .footer-social h4 {
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icons img {
+    width: 24px;
+  }
+  
+  .language-selector span {
+    font-size: 10px;
+  }
+  
+  .copyright {
+    font-size: 10px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 20px;
+    top: 80px;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+    top: 115px;
+  }
+  
+  .hero-buttons {
+    top: 210px;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100px;
+    font-size: 10px;
+  }
+  
+  .cod-title {
+    font-size: 22px;
+  }
+  
+  .btn-dark, .btn-green {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  
+  .card-text-left .text-side h2,
+  .card-image-left .text-side h2 {
+    font-size: 22px;
+  }
+  
+  .tech-title {
+    font-size: 22px;
   }
 }
