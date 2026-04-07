@@ -247,7 +247,7 @@ header {
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 335px;
 }
 
 .link-column {
@@ -405,4 +405,224 @@ header {
   width: 14px;
   margin-left: 4px;
   vertical-align: middle;
+}
+
+/* Call of Duty секция */
+.cod-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.cod-title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #425665;
+  margin-bottom: 25px;
+}
+
+.cod-image {
+  width: 100%;
+  background: #d7d7d7;
+  border-radius: 11px;
+  overflow: hidden;
+  box-shadow: 0 2px 36px rgba(0, 0, 0, 0.15);
+}
+
+.cod-image img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 890 / 562;
+  object-fit: cover;
+}
+
+.cod-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-dark {
+  background: linear-gradient(135deg, #676c6e, #373a3c);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-green {
+  background: #8dd83d;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* КАРТОЧКА 1: текст слева, фото справа */
+.card-text-left {
+  display: flex;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.card-text-left .text-side {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-text-left .text-side h2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #425665;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.card-text-left .text-side p {
+  font-size: 21px;
+  font-weight: 400;
+  color: #425665;
+  opacity: 0.85;
+}
+
+.card-text-left .image-side {
+  flex: 1;
+  background: #f7f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-text-left .image-side img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+/* КАРТОЧКА 2: фото слева, текст справа */
+.card-image-left {
+  display: flex;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.card-image-left .image-side {
+  flex: 1;
+  background: #f7f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-image-left .image-side img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+.card-image-left .text-side {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-image-left .text-side h2 {
+  font-size: 36px;
+  font-weight: 400;
+  color: #425665;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.card-image-left .text-side p {
+  font-size: 21px;
+  font-weight: 400;
+  color: #425665;
+  opacity: 0.85;
+}
+
+/* Technical Specifications секция */
+.tech-section {
+  margin-top: 20px;
+}
+
+.tech-title {
+  font-size: 36px;
+  font-weight: 400;
+  color: #425665;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.spec-item {
+  font-size: 18px;
+  font-weight: 400;
+  color: #425665;
+  line-height: 1.4;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeef2;
+}
+
+/* нижние кнопки */
+.bottom-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* адаптив */
+@media (max-width: 900px) {
+  body {
+    padding: 20px 0;
+  }
+  .card-text-left,
+  .card-image-left {
+    flex-direction: column;
+  }
+  .specs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .cod-title,
+  .tech-title {
+    font-size: 28px;
+  }
+  .card-text-left .text-side h2,
+  .card-image-left .text-side h2 {
+    font-size: 28px;
+  }
+  .card-text-left .text-side,
+  .card-image-left .text-side {
+    padding: 30px 20px;
+  }
 }
