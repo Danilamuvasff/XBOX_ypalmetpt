@@ -2,14 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
     <title>Главная страница XBOX</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="header-container">
-        <a href="#"><img src="./img/logo.svg" alt="логотип XBOX" /></a>
+        <a href="#" class="logo"
+          ><img src="./img/logo.svg" alt="логотип XBOX"
+        /></a>
+
+        <!-- Десктопное меню -->
         <ul class="nav-list">
           <li>
             <a href="#">Games</a><img src="./img/down-arrow.png" alt="" />
@@ -18,29 +24,51 @@
             <a href="#">Consoles</a><img src="./img/down-arrow.png" alt="" />
           </li>
           <li><a href="#">Community</a></li>
-          <input
-            type="text"
-            class="search-input"
-            name="username"
-            placeholder="Search"
-          />
+          <input type="text" class="search-input" placeholder="Search" />
           <li>
-            <a href="#"><img src="./img/user.svg" alt="" /> My XBOX</a>
-            <img src="./img/down-arrow.png" alt="" />
+            <a href="#"><img src="./img/user.svg" alt="" /> My XBOX</a
+            ><img src="./img/down-arrow.png" alt="" />
           </li>
         </ul>
+
+        <!-- Гамбургер-меню -->
+        <div class="burger-menu" id="burgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-nav" id="mobileNav">
+      <ul class="mobile-nav-list">
+        <li><a href="#">Games</a><img src="./img/down-arrow.png" alt="" /></li>
+        <li>
+          <a href="#">Consoles</a><img src="./img/down-arrow.png" alt="" />
+        </li>
+        <li><a href="#">Community</a></li>
+        <li>
+          <a href="#"><img src="./img/user.svg" alt="" /> My XBOX</a
+          ><img src="./img/down-arrow.png" alt="" />
+        </li>
+      </ul>
+      <div class="mobile-search">
+        <input type="text" placeholder="Search" />
+      </div>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
     <main>
-      <!-- Hero секция -->
+      <!-- Hero секция с адаптивной фоткой -->
       <section class="hero">
-        <div class="container hero-container">
+        <div class="hero-container">
           <div class="hero-content">
             <h1 class="hero-title">Call of Duty: WWII</h1>
             <h2 class="hero-subtitle">Released on: 23/11/2</h2>
             <div class="hero-buttons">
               <button class="btn btn-primary">Order Now</button>
-              <button class="btn btn-primary">More Games</button>
+              <button class="btn btn-secondary">More Games</button>
             </div>
           </div>
         </div>
@@ -48,21 +76,17 @@
 
       <section class="Game details">
         <div class="container">
-          <!-- Call of Duty: WWII -->
           <div class="cod-section">
             <h1 class="cod-title">Call of Duty: WWII</h1>
-
             <div class="cod-buttons">
               <button class="btn-dark">XBOX Consoles</button>
               <button class="btn-green">Start streaming on mixer</button>
             </div>
-
             <div class="cod-image">
               <img src="./img/images_1.jpg" alt="Call of Duty WWII" />
             </div>
           </div>
 
-          <!-- КАРТОЧКА 1: ТЕКСТ СЛЕВА, ФОТО СПРАВА -->
           <div class="card-text-left">
             <div class="text-side">
               <h2>Life Advice<br />Looking Through<br />A Window</h2>
@@ -72,7 +96,6 @@
             </div>
           </div>
 
-          <!-- КАРТОЧКА 2: ФОТО СЛЕВА, ТЕКСТ СПРАВА -->
           <div class="card-image-left">
             <div class="image-side">
               <img src="./img/images_3.jpg" alt="Best answers" />
@@ -82,7 +105,6 @@
             </div>
           </div>
 
-          <!-- Technical Specifications -->
           <div class="tech-section">
             <h2 class="tech-title">Technical Specifications</h2>
             <div class="specs-grid">
@@ -103,7 +125,6 @@
             </div>
           </div>
 
-          <!-- нижние кнопки -->
           <div class="bottom-buttons">
             <button class="btn-green">Order Now</button>
             <button class="btn-dark">Technical Specifications</button>
@@ -112,11 +133,9 @@
       </section>
     </main>
 
-    <!-- Подвал сайта -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-top">
-          <!-- Левая часть: ссылки -->
           <div class="footer-links">
             <div class="link-column">
               <h4>XBOX</h4>
@@ -137,36 +156,19 @@
               </ul>
             </div>
           </div>
-
-          <!-- Правая часть: Follow Us + иконки соцсетей (как в оригинале) -->
           <div class="footer-social">
             <h4>Follow Us</h4>
             <div class="social-icons">
               <a href="#"
-                ><img
-                  src="./img/logo_faacebook.svg"
-                  alt="Twitter"
-                  width="11"
-                  onerror="this.src = '//placehold.co/28x28/444/white?text=T'"
+                ><img src="./img/logo_faacebook.svg" alt="Facebook"
               /></a>
+              <a href="#"><img src="./img/logo_twitter.svg" alt="Twitter" /></a>
               <a href="#"
-                ><img
-                  src="./img/logo_twitter.svg"
-                  alt="Facebook"
-                  width="21"
-                  onerror="this.src = '//placehold.co/28x28/444/white?text=F'"
-              /></a>
-              <a href="#"
-                ><img
-                  src="./img/logo_Instagram.svg"
-                  alt="Instagram"
-                  width="19"
-                  onerror="this.src = '//placehold.co/28x28/444/white?text=I'"
+                ><img src="./img/logo_Instagram.svg" alt="Instagram"
               /></a>
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <div class="footer-legal">
             <div class="language-selector">
@@ -177,5 +179,6 @@
         </div>
       </div>
     </footer>
+<script src="main.js"></script>
   </body>
 </html>
