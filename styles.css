@@ -84,7 +84,7 @@ header {
   height: 648px;
 }
 
-/* Заголовок Star Wars */
+/* Заголовок */
 .hero-title {
   position: absolute;
   top: 175px;
@@ -99,7 +99,7 @@ header {
   max-width: 300px;
 }
 
-/* Подзаголовок Battlefront II */
+/* Подзаголовок */
 .hero-subtitle {
   position: absolute;
   top: 215px;
@@ -134,19 +134,17 @@ header {
   border: none;
 }
 
-/* Первая кнопка Order Now */
 .btn-primary {
   background-color: #8dd83d;
   color: white;
 }
 
-/* Вторая кнопка More Games */
 .btn-secondary {
   background-color: #686c6f;
   color: white;
 }
 
-/* ========== HIGHLIGHTS СЕКЦИЯ ========== */
+/* Highlights секция */
 .highlights {
   background-color: #1a1a1a;
   padding: 60px 0;
@@ -161,14 +159,12 @@ header {
   margin-bottom: 50px;
 }
 
-/* 3 карточки в ряд */
 .highlights-grid {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-/* Одна цельная карточка */
 .highlight-card {
   background-color: #2a2a2a;
   border-radius: 8px;
@@ -178,14 +174,12 @@ header {
   padding-bottom: 30px;
 }
 
-/* Фото сверху */
 .card-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-/* Заголовок */
 .card-title {
   font-family: var(--font-family);
   font-weight: 700;
@@ -195,7 +189,6 @@ header {
   text-transform: uppercase;
 }
 
-/* Описание */
 .card-desc {
   font-family: var(--font-family);
   font-weight: 400;
@@ -206,7 +199,6 @@ header {
   padding: 0 15px;
 }
 
-/* Кнопка */
 .card-btn {
   background-color: #8dd83d;
   color: white;
@@ -220,7 +212,7 @@ header {
   transition: opacity 0.2s;
 }
 
-/* ----- Стили ФУТЕРА (основаны на вашем Footer.png) ----- */
+/* ========== ФУТЕР С ПРАВИЛЬНЫМИ ИКОНКАМИ ========== */
 .site-footer {
   background-color: #151515;
   padding: 48px 0 30px;
@@ -234,7 +226,6 @@ header {
   padding: 0 30px;
 }
 
-/* Верхняя часть футера: навигация и соцсети */
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -245,11 +236,10 @@ header {
   margin-bottom: 35px;
 }
 
-/* Левая часть: колонки ссылок */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 335px;
+  gap: 80px;
 }
 
 .link-column {
@@ -284,7 +274,7 @@ header {
   color: #8dd83d;
 }
 
-/* Правая часть: иконки соцсетей (Follow Us) */
+/* Соцсети - правильные иконки */
 .footer-social {
   text-align: right;
 }
@@ -299,21 +289,29 @@ header {
 
 .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   justify-content: flex-end;
+  align-items: center;
 }
 
-.social-icons a {
-  display: inline-block;
-  opacity: 0.7;
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.2s;
 }
 
-.social-icons a:hover {
-  opacity: 1;
+.social-icon:hover {
+  opacity: 0.8;
 }
 
-/* Нижняя часть футера: логотип, копирайт, язык */
+/* Стили для иконок соцсетей */
+.icon-facebook,
+.icon-twitter,
+.icon-instagram {
+  display: inline-block;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -322,11 +320,6 @@ header {
   gap: 20px;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-logo img {
-  height: 36px;
-  width: auto;
 }
 
 .footer-legal {
@@ -362,16 +355,12 @@ header {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.language-selector img {
-  width: 14px;
-  opacity: 0.7;
-}
-
 .copyright {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
 }
 
+/* Game details секция */
 .cod-section {
   text-align: center;
   margin-bottom: 60px;
@@ -429,7 +418,7 @@ header {
   object-fit: cover;
 }
 
-/* КАРТОЧКА 1: текст слева, фото справа */
+/* Карточки */
 .card-text-left {
   display: flex;
   border: 1px solid #cdcdcd;
@@ -456,14 +445,6 @@ header {
   font-family: var(--font-family);
 }
 
-.card-text-left .text-side p {
-  font-size: 21px;
-  font-weight: 400;
-  color: #425665;
-  opacity: 0.85;
-  font-family: var(--font-family);
-}
-
 .card-text-left .image-side {
   flex: 1;
   background: #f7f7f8;
@@ -480,7 +461,6 @@ header {
   display: block;
 }
 
-/* КАРТОЧКА 2: фото слева, текст справа */
 .card-image-left {
   display: flex;
   border: 1px solid #cdcdcd;
@@ -523,15 +503,7 @@ header {
   font-family: var(--font-family);
 }
 
-.card-image-left .text-side p {
-  font-size: 21px;
-  font-weight: 400;
-  color: #425665;
-  opacity: 0.85;
-  font-family: var(--font-family);
-}
-
-/* Technical Specifications секция */
+/* Technical Specifications */
 .tech-section {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -563,7 +535,6 @@ header {
   font-family: var(--font-family);
 }
 
-/* нижние кнопки */
 .bottom-buttons {
   display: flex;
   gap: 20px;
@@ -572,34 +543,33 @@ header {
   margin-bottom: 40px;
 }
 
-/* ========== ПОЛНАЯ АДАПТАЦИЯ ПОД 375px ========== */
+/* ========== АДАПТАЦИЯ ПОД 375px ========== */
 @media (max-width: 768px) {
-  /* Шапка */
   .header-container {
     padding: 0 15px;
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .nav-list {
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
   }
-  
+
   .search-input {
     width: 100%;
     max-width: 200px;
   }
-  
-  /* Hero секция */
+
   .hero {
     height: 500px;
   }
-  
+
   .hero-container {
     height: 500px;
   }
-  
+
   .hero-title {
     top: 120px;
     right: 20px;
@@ -608,7 +578,7 @@ header {
     max-width: none;
     text-align: center;
   }
-  
+
   .hero-subtitle {
     top: 165px;
     right: 20px;
@@ -617,128 +587,111 @@ header {
     max-width: none;
     text-align: center;
   }
-  
+
   .hero-buttons {
     top: 280px;
     right: 20px;
     left: 20px;
     justify-content: center;
-    gap: 15px;
   }
-  
-  .btn {
-    width: 120px;
-    font-size: 12px;
-  }
-  
-  /* Highlights секция */
+
   .highlights-grid {
     flex-direction: column;
     gap: 20px;
     padding: 0 15px;
   }
-  
+
   .highlights-title {
     font-size: 24px;
-    padding: 0 15px;
   }
-  
-  .highlight-card {
-    width: 100%;
-  }
-  
-  /* Футер */
+
   .footer-container {
     padding: 0 20px;
   }
-  
+
   .footer-top {
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .footer-links {
     gap: 30px;
     flex-direction: column;
   }
-  
+
   .footer-social {
     text-align: left;
   }
-  
+
   .social-icons {
     justify-content: flex-start;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .footer-legal {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
-  
-  /* Game details секция */
+
   .cod-title {
     font-size: 28px;
   }
-  
+
   .cod-buttons {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
-  .btn-dark, .btn-green {
+
+  .btn-dark,
+  .btn-green {
     padding: 10px 20px;
     font-size: 14px;
     width: 100%;
     max-width: 250px;
   }
-  
-  .card-text-left, .card-image-left {
+
+  .card-text-left,
+  .card-image-left {
     flex-direction: column;
   }
-  
+
   .card-text-left .text-side h2,
   .card-image-left .text-side h2 {
     font-size: 28px;
     text-align: center;
   }
-  
+
   .card-text-left .text-side,
   .card-image-left .text-side {
     padding: 25px 20px;
     text-align: center;
   }
-  
-  .card-text-left .image-side,
-  .card-image-left .image-side {
-    padding: 15px;
-  }
-  
+
   .tech-title {
     font-size: 28px;
   }
-  
+
   .specs-grid {
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .spec-item {
     font-size: 16px;
   }
-  
+
   .bottom-buttons {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   .bottom-buttons .btn-green,
   .bottom-buttons .btn-dark {
     width: 100%;
@@ -746,151 +699,80 @@ header {
   }
 }
 
-/* Специально для 375px */
 @media (max-width: 480px) {
-  body {
-    padding: 0;
-  }
-  
-  .container {
-    padding: 0 15px;
-  }
-  
-  /* Шапка */
-  .nav-list {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-  
-  .header-container a {
-    font-size: 14px;
-  }
-  
-  .search-input {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 10px;
-  }
-  
-  /* Hero */
-  .hero {
-    height: 450px;
-  }
-  
-  .hero-container {
-    height: 450px;
-  }
-  
   .hero-title {
-    top: 100px;
     font-size: 24px;
+    top: 100px;
   }
-  
+
   .hero-subtitle {
-    top: 140px;
     font-size: 16px;
+    top: 140px;
   }
-  
+
   .hero-buttons {
     top: 240px;
   }
-  
+
   .btn {
     width: 110px;
     font-size: 11px;
     height: 34px;
   }
-  
-  /* Карточки */
+
   .cod-title {
     font-size: 24px;
   }
-  
+
   .card-text-left .text-side h2,
   .card-image-left .text-side h2 {
     font-size: 24px;
   }
-  
+
   .tech-title {
     font-size: 24px;
   }
-  
-  .spec-item {
-    font-size: 14px;
-  }
-  
-  /* Футер */
-  .site-footer {
-    padding: 35px 0 25px;
-  }
-  
-  .link-column h4 {
-    font-size: 14px;
-  }
-  
-  .link-column a {
-    font-size: 12px;
-  }
-  
-  .footer-social h4 {
-    font-size: 14px;
-  }
-  
+
   .social-icons {
-    gap: 15px;
-  }
-  
-  .social-icons img {
-    width: 24px;
-  }
-  
-  .language-selector span {
-    font-size: 10px;
-  }
-  
-  .copyright {
-    font-size: 10px;
+    gap: 20px;
   }
 }
 
-/* Для очень маленьких экранов */
 @media (max-width: 375px) {
   .hero-title {
     font-size: 20px;
     top: 80px;
   }
-  
+
   .hero-subtitle {
     font-size: 14px;
     top: 115px;
   }
-  
+
   .hero-buttons {
     top: 210px;
     gap: 10px;
   }
-  
+
   .btn {
     width: 100px;
     font-size: 10px;
   }
-  
+
   .cod-title {
     font-size: 22px;
   }
-  
-  .btn-dark, .btn-green {
-    font-size: 13px;
-    padding: 8px 16px;
-  }
-  
+
   .card-text-left .text-side h2,
   .card-image-left .text-side h2 {
     font-size: 22px;
   }
-  
+
   .tech-title {
     font-size: 22px;
+  }
+
+  .social-icons {
+    gap: 15px;
   }
 }
