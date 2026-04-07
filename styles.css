@@ -10,197 +10,210 @@
 :root {
   --font-family: "HelveticaNeue", sans-serif;
 }
-
-body {
-  background-color: #1a1a1a; /* Для контраста, так как секции выше темные */
-  font-family: var(--font-family);
+.container {
+  max-width: 1130px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+header {
+  background: #373a3c;
+  border-bottom: 3px solid #979797;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
 }
 
-/* ----- Стили ФУТЕРА (основаны на вашем Footer.png) ----- */
-.site-footer {
-  background-color: #151515; /* Почти черный, как на скриншоте */
-  padding: 48px 0 30px;
-  border-top: 1px solid #2a2a2a;
-  font-family: var(--font-family);
-}
-
-.footer-container {
+.header-container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 30px;
-}
-
-/* Верхняя часть футера: навигация и соцсети */
-.footer-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
-  border-bottom: 1px solid #2c2c2c;
-  padding-bottom: 35px;
-  margin-bottom: 35px;
-}
-
-/* Левая часть: колонки ссылок */
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-}
-
-.link-column {
-  min-width: 130px;
-}
-
-.link-column h4 {
-  color: #8dd83d; /* Акцентный зеленый, как в карточках */
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.link-column ul {
-  list-style: none;
-}
-
-.link-column li {
-  margin-bottom: 12px;
-}
-
-.link-column a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.link-column a:hover {
-  color: #8dd83d;
-}
-
-/* Правая часть: иконки соцсетей (Follow Us) */
-.footer-social {
-  text-align: right;
-}
-
-.footer-social h4 {
-  color: #8dd83d;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 18px;
-  text-transform: uppercase;
-}
-
-.social-icons {
-  display: flex;
   gap: 20px;
-  justify-content: flex-end;
 }
-
-.social-icons a {
-  display: inline-block;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-.social-icons a:hover {
-  opacity: 1;
-}
-
-/* Нижняя часть футера: логотип, копирайт, язык */
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footer-logo img {
-  height: 36px;
-  width: auto;
-}
-
-.footer-legal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  align-items: center;
-}
-
-.footer-legal a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-  transition: color 0.2s;
-  font-size: 12px;
-}
-
-.footer-legal a:hover {
-  color: #8dd83d;
-}
-
-.language-selector {
+.header-container li {
   display: flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  background: #2a2a2a;
-  padding: 5px 12px;
-  border-radius: 20px;
+}
+.header-container a {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.5);
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.search-input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  color: white;
+  outline: none;
+  width: 160px;
 }
 
-.language-selector span {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.8);
+/* Hero секция */
+.hero {
+  background-image: url("img/Carousel.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 648px;
+  position: relative;
 }
 
-.language-selector img {
-  width: 14px;
-  opacity: 0.7;
+/* Контейнер */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  height: 648px;
 }
 
-.copyright {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
+/* Заголовок Star Wars */
+.hero-title {
+  position: absolute;
+  top: 175px;
+  right: 100px; /* Остаётся справа */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 36px;
+  color: #fff;
+  margin: 0;
+  text-align: left; /* Текст внутри выровнен влево */
+  width: 100%; /* Добавлено для правильного выравнивания */
+  max-width: 300px; /* Ограничиваем ширину */
 }
 
-/* Адаптивность */
-@media (max-width: 900px) {
-  .footer-top {
-    flex-direction: column;
-  }
-  .footer-social {
-    text-align: left;
-  }
-  .social-icons {
-    justify-content: flex-start;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .footer-links {
-    gap: 30px;
-  }
+/* Подзаголовок Battlefront II */
+.hero-subtitle {
+  position: absolute;
+  top: 215px;
+  right: 100px; /* Остаётся справа */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+  text-align: left; /* Текст внутри выровнен влево */
+  width: 100%;
+  max-width: 300px;
 }
 
-@media (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .footer-container {
-    padding: 0 20px;
-  }
+/* Кнопки */
+.hero-buttons {
+  position: absolute;
+  top: 400px;
+  right: 100px; /* Остаётся справа */
+  display: flex;
+  gap: 13px;
 }
 
-/* Стилизация маленькой иконки и стрелок (как в вашем дизайне) */
-.small-icon {
-  width: 14px;
-  margin-left: 4px;
-  vertical-align: middle;
+.btn {
+  width: 136px;
+  height: 38px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Первая кнопка Watch Trailer */
+.btn-primary {
+  background-color: #8dd83d;
+  color: white;
+}
+
+/* Вторая кнопка Explore Games */
+.btn-secondary {
+  background-color: #686c6f;
+  color: white;
+}
+
+/* ========== HIGHLIGHTS СЕКЦИЯ ========== */
+.highlights {
+  background-color: #1a1a1a;
+  padding: 60px 0;
+}
+
+.highlights-title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 3 карточки в ряд */
+.highlights-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Одна цельная карточка */
+.highlight-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+/* Фото сверху */
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Заголовок */
+.card-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  color: #8dd83d;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+
+/* Описание */
+.card-desc {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+/* Кнопка */
+.card-btn {
+  background-color: #8dd83d;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
