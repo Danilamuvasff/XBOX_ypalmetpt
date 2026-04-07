@@ -132,13 +132,13 @@ header {
   border: none;
 }
 
-/* Первая кнопка Watch Trailer */
+/* Первая кнопка Order Now */
 .btn-primary {
   background-color: #8dd83d;
   color: white;
 }
 
-/* Вторая кнопка Explore Games */
+/* Вторая кнопка More Games */
 .btn-secondary {
   background-color: #686c6f;
   color: white;
@@ -217,3 +217,7 @@ header {
   cursor: pointer;
   transition: opacity 0.2s;
 }
+
+
+
+
