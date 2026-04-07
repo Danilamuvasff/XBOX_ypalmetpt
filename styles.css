@@ -499,7 +499,7 @@ header {
 
 .card-text-left .image-side {
   flex: 1;
-  background: #f7f7f8;
+  /* background: #f7f7f8; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -516,7 +516,7 @@ header {
 /* КАРТОЧКА 2: фото слева, текст справа */
 .card-image-left {
   display: flex;
-  border: 1px solid #cdcdcd;
+  /* border: 1px solid #cdcdcd; */
   border-radius: 5px;
   margin-bottom: 50px;
   overflow: hidden;
